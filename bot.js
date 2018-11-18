@@ -41,7 +41,7 @@ client.user.setGame(` ♥ ♥ أَشْهَدُ أَنْ لاَ إِلَهَ إِ
 
 
 client.on('message', message => {
-    if (message.content.startsWith("!bans")) {
+    if (message.content.startsWith("A!bans")) {
         message.guild.fetchBans()
         .then(bans => message.channel.send(`${bans.size} عدد اشخاص المبندة من السيرفر `))
   .catch(console.error);
@@ -88,7 +88,7 @@ const lion = {
   
   
   client.on('message' , async message => {
-      var prefix = "!";
+      var prefix = "A!";
          if(message.content.startsWith(prefix + "emoji")) {
             let args = message.content.split(" ").slice(1);
     if (args.length < 1) {
@@ -114,6 +114,103 @@ const lion = {
      
 
 
+
+ 
+client.on("message", message => {
+    const prefix = "A!"
+              
+          if(!message.channel.guild) return;
+   if(message.author.bot) return;
+      if(message.content === prefix + "image"){ 
+          const embed = new Discord.RichEmbed()
+  
+      .setTitle(`This is  ** ${message.guild.name} **  Photo !`)
+  .setAuthor(message.author.username, message.guild.iconrURL)
+    .setColor(0x164fe3)
+    .setImage(message.guild.iconURL)
+    .setURL(message.guild.iconrURL)
+                    .setTimestamp()
+
+   message.channel.send({embed});
+      }
+  });
+
+ 
+
+
+
+
+
+  
+client.on('message', async msg => {
+      client.snek = require('snekfetch');
+    var p = "A!"
+  if(msg.content.startsWith(p + "isay")) {
+   let args = msg.content.split(' ').slice(1).join(' ');
+  if(!args) return args.missing(msg, 'No text added', this.help);
+  msg.channel.startTyping();
+  const searchMessage = await msg.channel.send('🖌️Painting...');
+  const { body } = await client.snek.get(`https://nekobot.xyz/api/imagegen?type=clyde&text=${encodeURIComponent(args)}`);
+  msg.channel.send({file: { attachment:body.message, name: 'clyde.png'}}).then(()=> { searchMessage.delete(); msg.channel.stopTyping(); });
+};
+});
+
+ 
+ 
+
+client.on("message", msg => {
+var prefix = "A!";//البرفكس
+if(msg.content.startsWith(prefix + "isay")) {
+var args = msg.content.split(" ").slice(1).join(" ")
+var AlphaBack = new Discord.RichEmbed()
+.setTitle(args);
+msg.channel.sendEmbed(AlphaBack);
+}
+});
+
+
+
+
+
+
+
+
+
+
+ 
+   client.on('message',function(message) {
+  if (message.author.bot) return;
+var prefix = "A!";
+                  if(!message.channel.guild) return;
+
+                    if (message.content === prefix + "member") {
+ const embed = new Discord.RichEmbed()
+
+    .setDescription(`**Members info :sparkles:
+:green_heart: online:   ${message.guild.members.filter(m=>m.presence.status == 'online').size}
+:heart:  dnd:       ${message.guild.members.filter(m=>m.presence.status == 'dnd').size}
+:yellow_heart:  idle:     ${message.guild.members.filter(m=>m.presence.status == 'idle').size}
+:diamond_shape_with_a_dot_inside:   membersCount:  ${message.guild.memberCount - message.guild.members.filter(m=>m.user.bot).size}
+:bulb: bots: ${message.guild.members.filter(m=>m.user.bot).size} **`)
+         message.channel.send({embed});
+
+    }
+      });
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+ 
 
 
 
