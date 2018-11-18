@@ -44,6 +44,24 @@ Discord API: ${client.ping.toFixed(0)} ms\`\`\``);
  
  
  
+                                 
+                                 
+  
+client.on('message', Sal => { // By Salto7#4595
+  if(Sal.content === '!bot') { //هنا تغير البرفيكس
+  var embed = new Discord.RichEmbed()
+  .setColor('RANDOM')
+  .setThumbnail(client.user.avatarURL)
+  .addField('Bot Name', client.user.username, true)
+  .setFooter(client.user.tag, client.user.avatarURL, true)
+  .addField('Bot Tag', client.user.discriminator, true)
+  .addField('Bot id', client.user.id, true)
+  .addField('Create Bot At', client.user.createdAt, true)
+  Sal.channel.sendEmbed(embed);
+}
+});
+                  
+          
 
 
 
