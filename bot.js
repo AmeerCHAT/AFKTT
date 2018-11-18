@@ -5,7 +5,7 @@ const client2 = new Discord.Client();
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`AFK`,"http://twitch.tv/Nadir44king")
+client.user.setGame(` ♥ ♥ أَشْهَدُ أَنْ لاَ إِلَهَ إِلاَّ اللَّهُ و أَنَّ مُحَمَّدًا رَسُولُ اللَّهِ ♥ ♥ `,"http://twitch.tv/Nadir44king")
   console.log('')
   console.log('')
   console.log('╔[═════════════════════════════════════════════════════════════════]╗')
