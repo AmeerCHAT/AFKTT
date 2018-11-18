@@ -32,36 +32,20 @@ client.user.setGame(` ♥ ♥ أَشْهَدُ أَنْ لاَ إِلَهَ إِ
 
 
 
-client.on('message', message => {client.on('message', message =>{
-    if(message.content === '#ping'){
-let start = Date.now(); message.channel.send('pong').then(message => { 
-message.edit(`\`\`\`js
-Time taken: ${Date.now() - start} ms
-Discord API: ${client.ping.toFixed(0)} ms\`\`\``);
-    });
-    }
-});
- 
- 
- 
-                                 
-                                 
-  
-client.on('message', Sal => { // By Salto7#4595
-  if(Sal.content === '!bot') { //هنا تغير البرفيكس
-  var embed = new Discord.RichEmbed()
-  .setColor('RANDOM')
-  .setThumbnail(client.user.avatarURL)
-  .addField('Bot Name', client.user.username, true)
-  .setFooter(client.user.tag, client.user.avatarURL, true)
-  .addField('Bot Tag', client.user.discriminator, true)
-  .addField('Bot id', client.user.id, true)
-  .addField('Create Bot At', client.user.createdAt, true)
-  Sal.channel.sendEmbed(embed);
-}
-});
-                  
-          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
