@@ -41,7 +41,7 @@ client.user.setGame(` ♥ ♥ أَشْهَدُ أَنْ لاَ إِلَهَ إِ
 
 
 client.on('message', message => {
-    if (message.content.startsWith("A!bans")) {
+    if (message.content.startsWith("AS!bans")) {
         message.guild.fetchBans()
         .then(bans => message.channel.send(`${bans.size} عدد اشخاص المبندة من السيرفر `))
   .catch(console.error);
@@ -88,7 +88,7 @@ const lion = {
   
   
   client.on('message' , async message => {
-      var prefix = "A!";
+      var prefix = "AS!";
          if(message.content.startsWith(prefix + "emoji")) {
             let args = message.content.split(" ").slice(1);
     if (args.length < 1) {
@@ -117,7 +117,7 @@ const lion = {
 
  
 client.on("message", message => {
-    const prefix = "A!"
+    const prefix = "AS!"
               
           if(!message.channel.guild) return;
    if(message.author.bot) return;
@@ -144,7 +144,7 @@ client.on("message", message => {
   
 client.on('message', async msg => {
       client.snek = require('snekfetch');
-    var p = "A!"
+    var p = "AS!"
   if(msg.content.startsWith(p + "isay")) {
    let args = msg.content.split(' ').slice(1).join(' ');
   if(!args) return args.missing(msg, 'No text added', this.help);
@@ -159,7 +159,7 @@ client.on('message', async msg => {
  
 
 client.on("message", msg => {
-var prefix = "A!";//البرفكس
+var prefix = "AS!";//البرفكس
 if(msg.content.startsWith(prefix + "isay")) {
 var args = msg.content.split(" ").slice(1).join(" ")
 var AlphaBack = new Discord.RichEmbed()
@@ -180,7 +180,7 @@ msg.channel.sendEmbed(AlphaBack);
  
    client.on('message',function(message) {
   if (message.author.bot) return;
-var prefix = "A!";
+var prefix = "AS!";
                   if(!message.channel.guild) return;
 
                     if (message.content === prefix + "member") {
