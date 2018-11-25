@@ -20,4 +20,3 @@ var channel = "516224761647464488";
 
 
 client.login(process.env.TOKEN);
-client2.login(process.env.TOKEN2);
